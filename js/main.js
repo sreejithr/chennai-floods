@@ -5,7 +5,7 @@ var Chennai = function() {
         return new google.maps.Map(el, {zoom: 12, center: new google.maps.LatLng(13.0827, 80.2707)});
     }
 
-    this.addDataToMap = function(map, geoJSONString) {
+    this.addDataToMap = function(map, geojson) {
         map.data.addGeoJson(geojson);
     }
 

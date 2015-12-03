@@ -10,6 +10,13 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+@font-face {
+    font-family: 'Clear Sans';
+    src: url('fonts/ClearSans-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
     color: #222;
     font-size: 1em;
@@ -95,21 +102,64 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.container {
+    display: flex;
+}
 
+#sidebar {
+    width: 26%;
+    font-family: 'Open Sans', helvetica, sans-serif;
+    text-shadow: -1px -1px #EEE;
+    -webkit-box-shadow: 3px 0px 6px -1px rgba(199,199,199,1);
+    -moz-box-shadow: 3px 0px 6px -1px rgba(199,199,199,1);
+    box-shadow: 3px 0px 6px -1px rgba(199,199,199,1);
+    z-index: 9999;
+}
 
+    h1#sidebar-title {
+        font-size: 1.7em;
+        text-align: center;
+        margin: 10px 10px 5px 5px;
+        border-left: 5px solid #C5E124;
+    }
 
+    p#sidebar-contents {
+        color: #444;
+        text-shadow: none;
+        padding: 15px;
+        padding-top: 0px;
+    }
 
+#content {
+    flex-grow: 3;
+}
 
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 30px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
 
+#place-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 500px;
+}
 
-
-
-
-
-
-
-
-
+#map {
+    width: 100%;
+    height: 100vh;
+}
 
 /* ==========================================================================
    Helper classes
@@ -276,9 +326,4 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
-}
-
-#map {
-    width: 500px;
-    height: 500px;
 }

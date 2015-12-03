@@ -6,7 +6,6 @@ var Chennai = function() {
     }
 
     this.addDataToMap = function(map, geoJSONString) {
-        var geojson = JSON.parse(geoJSONString);
         map.data.addGeoJson(geojson);
     }
 

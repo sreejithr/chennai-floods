@@ -25,7 +25,7 @@ var Chennai = function() {
     this.render = function() {
         var self = this;
         var map = self.displayAndGetMap(document.getElementById("map"));
-        var geoJSONUrl = "/chennai-flooded-streets-Dec2.geojson";
+        var geoJSONUrl = "/data/chennai-flooded-streets-Dec2.geojson";
 
         $.ajax({
             url: geoJSONUrl,

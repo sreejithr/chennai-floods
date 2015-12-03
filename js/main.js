@@ -7,7 +7,7 @@ var Chennai = function() {
 
     this.addDataToMap = function(map, geoJSONString) {
         var geojson = JSON.parse(geoJSONString);
-            map.data.addGeoJson(geojson);
+        map.data.addGeoJson(geojson);
     }
 
     this.styleMap = function(map) {
@@ -25,7 +25,7 @@ var Chennai = function() {
     this.render = function() {
         var self = this;
         var map = self.displayAndGetMap(document.getElementById("map"));
-        var geoJSONUrl = "/chennai-floods/chennai-dec2.geojson";
+        var geoJSONUrl = "/chennai-floods/data/chennai-dec2.geojson";
 
         $.ajax({
             url: geoJSONUrl,
